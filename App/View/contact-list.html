@@ -1,0 +1,15 @@
+<h1>Contact List</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tr ng-repeat="contact in contacts">
+        <td>{{contact.id}}</td>
+        <td>{{contact.name}}</td>
+        <td><a ui-sref="contact.detail({id:contact.id})">View</a></td>
+    </tr>
+</table>

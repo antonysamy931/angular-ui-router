@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="angular-ui-app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="Content/bootstrap/bootstrap.css" rel="stylesheet"/>
+</head>
+<body ng-controller="indexctrl">
+<a ui-sref-active="btn-success" class="btn" ui-sref="Home">Home</a>
+<a ui-sref-active="btn-success" class="btn" ui-sref="About">About</a>
+<a ui-sref="contact.list" class="btn" ng-class="{'btn-success':$state.includes('contact')}" >Contacts</a>
+<p ui-view="global"></p>
+<div ui-view></div>
+<pre>
+    $state={{$state.current.name}}
+    $stateParams={{$stateParams}}
+    $state full url={{$state.$current.url.source}}
+</pre>
+</body>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+<script type="text/javascript" src="Scripts/angular-ui-router.js"></script>
+
+<script type="text/javascript" src="App/App.js"></script>
+<script type="text/javascript" src="App/config.js"></script>
+
+<script type="text/javascript" src="App/Controller/indexcontroller.js"></script>
+<script type="text/javascript" src="App/Controller/homecontroller.js"></script>
+<script type="text/javascript" src="App/Controller/aboutcontroller.js"></script>
+<script type="text/javascript" src="App/Controller/contactscontroller.js"></script>
+<script type="text/javascript" src="App/Controller/detailcontroller.js"></script>
+
+</html>

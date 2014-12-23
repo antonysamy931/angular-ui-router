@@ -1,0 +1,6 @@
+<!--<pre>{{contact}}</pre>-->
+<h1>{{contact.name}}</h1>
+<ul>
+    <li ng-repeat="item in contact.items"><a ui-sref="contact.detail.item({itemid:item.id})">{{item.type}}</a></li>
+</ul>
+<div ui-view></div>

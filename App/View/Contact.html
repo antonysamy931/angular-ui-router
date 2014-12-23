@@ -1,0 +1,7 @@
+<ul>
+    <li ng-repeat="contact in contacts">
+       <a ui-sref="contact.detail({id:contact.id})" class="btn" ui-sref-active="btn-danger" >{{contact.name}}</a>
+    </li>
+</ul>
+<p ui-view="msgcontact"></p>
+<div ui-view></div>
